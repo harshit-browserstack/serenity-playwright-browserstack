@@ -1,0 +1,23 @@
+userName: YOUR_USERNAME
+accessKey: YOUR_ACCESS_KEY
+projectName: BrowserStack Samples
+buildName: browserstack build
+buildIdentifier: '#${BUILD_NUMBER}'
+# Cucumber on JUnit Platform 6 with Playwright; Serenity is used as a Cucumber reporter plugin.
+framework: cucumber-junit6
+platforms:
+  - os: Windows
+    osVersion: 11
+    browserName: chrome
+    browserVersion: latest
+  - os: OS X
+    osVersion: Sonoma
+    browserName: edge
+    browserVersion: latest
+# Keep equal to cucumber.execution.parallel.config.fixed.parallelism in junit-platform.properties.
+parallelsPerPlatform: 2
+browserstackLocal: true
+testObservability: true
+debug: false
+networkLogs: false
+consoleLogs: errors
